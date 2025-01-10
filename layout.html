@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Grid Layout with Images</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2efef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: repeat(3, 1fr);   
+            gap: 10px; 
+            width: 80vw;
+            height: 80vh;
+            background-color: white; /* White background for the layout */
+            padding: 10px; /* Padding around the grid items */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for visual effect */
+            border-radius: 10px; /* Rounded corners for the layout */
+        }
+
+        .grid-item {
+            background-color: white;
+            border: 4px solid #333;
+            border-radius: 5px;
+            overflow: hidden; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .item1 {
+            grid-column: span 2;
+            grid-row: span 2;
+            background-color: #f44336; /* Optional background for testing */
+        }
+
+        .item2 {
+            grid-column: 3 / 5;
+            grid-row: 1;
+        }
+
+        .item3 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .item4 {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">
+            <img src="rx.jpg" alt="Image 1">
+        </div>
+        <div class="grid-item item2">
+            <img src="yyy.avif" alt="Image 2">
+        </div>
+        <div class="grid-item item3">
+            <img src="zzz.jpg" alt="Image 3">
+        </div>
+        <div class="grid-item item4">
+            <img src="nnnn.jpg" alt="Image 4">
+        </div>
+    </div>
+</body>
+</html>
