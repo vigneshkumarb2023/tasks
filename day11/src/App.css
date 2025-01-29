@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://www.newgenapps.com/hubfs/Imported_Blog_Media/Website-Design-Background-Aug-21-2023-04-28-29-3461-PM.png");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px;
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  padding: 12px;
+  width: 65%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:h
+over {
+  background: #ff5f51;
+}
+
+.products {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  overflow-x: auto;
+  justify-content: flex-start;
+}
+
+.products li {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.products li:hover {
+  transform: translateY(-5px);
+}
+
+.products img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.cart {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.cart li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.cart img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  .products {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .products li {
+    width: 200px;
+  }
+
+  .cart li {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products li {
+    width: 150px;
+  }
+
+  .cart li {
+    padding: 12px;
+  }
+}
